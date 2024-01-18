@@ -1,7 +1,3 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
   <div>
     <a href="https://vitejs.dev" target="_blank">
@@ -11,8 +7,24 @@ import HelloWorld from './components/HelloWorld.vue'
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <HelloWorld msg="Vite + Vue" />
+  <CatsList :list="catsList"/>
 </template>
+
+<script setup>
+import {ref, onMounted} from 'vue'
+import CatsList from './components/CatsList.vue';
+
+import {cats} from '@/assets/cats'
+
+const catsList = ref([])
+const setCats = async () => {
+  catsList.value = await cats()
+}
+
+onMounted(() => {
+  setCats()
+})
+</script>
 
 <style scoped>
 .logo {

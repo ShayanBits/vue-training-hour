@@ -1,16 +1,17 @@
 import axios from "axios"
 var min_weight = '5';
 
-export const cats = async () => axios.get('https://api.api-ninjas.com/v1/cats', {
+export const cats = () => axios.get('https://api.api-ninjas.com/v1/cats', {
   params: {
     min_weight
   },
   headers: {
-    'X-Api-Key': 'YOUR_API_KEY'
+    'X-Api-Key': 'y2MeoOzGjd4v62ihrAnrnQ==0zkx6uJ4q77W7h6H'
   }
 })
 .then(function (response) {
   console.log(response.data);
+  return response.data
 })
 .catch(function (error) {
   if (error.response) {
