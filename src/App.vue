@@ -7,23 +7,23 @@
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <CatsList :list="catsList"/>
+  <CatsList/>
 </template>
 
 <script setup>
-import {ref, onMounted} from 'vue'
+// import {ref, onMounted} from 'vue'
 import CatsList from './components/CatsList.vue';
 
-import {cats} from '@/assets/cats'
+// import {cats} from '@/assets/cats'
 
-const catsList = ref([])
-const setCats = async () => {
-  catsList.value = await cats()
-}
+// const catsList = ref([])
+// const setCats = async () => {
+//   catsList.value = await cats()
+// }
 
-onMounted(() => {
-  setCats()
-})
+// onMounted(() => {
+//   setCats()
+// })
 </script>
 
 <style scoped>
