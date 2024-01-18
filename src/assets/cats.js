@@ -1,28 +1,15 @@
-import axios from "axios"
-var min_weight = '5';
+import { faker } from '@faker-js/faker';
 
-export const cats = () => axios.get('https://api.api-ninjas.com/v1/cats', {
-  params: {
-    min_weight
-  },
-  headers: {
-    'X-Api-Key': 'y2MeoOzGjd4v62ihrAnrnQ==0zkx6uJ4q77W7h6H'
+
+export const cats = () => {
+  let list = []
+  for(let i=0; i<20; i++){
+    list.push({
+      name: faker.person.firstName(),
+      jobTitle: faker.person.jobTitle(),
+      avatar: faker.image.avatarGitHub()
+    })
   }
-})
-.then(function (response) {
-  console.log(response.data);
-  return response.data
-})
-.catch(function (error) {
-  if (error.response) {
-    // The request was made and the server responded with a status code
-    // that falls out of the range of 2xx
-    console.error('Error:', error.response.status, error.response.data);
-  } else if (error.request) {
-    // The request was made but no response was received
-    console.error('Request failed:', error.request);
-  } else {
-    // Something happened in setting up the request that triggered an Error
-    console.error('Error:', error.message);
-  }
-});
+  return list
+}
+
