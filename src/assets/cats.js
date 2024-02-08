@@ -3,7 +3,7 @@ import { faker } from '@faker-js/faker';
 
 export const cats = () => {
   let list = []
-  for(let i=0; i<10; i++){
+  for(let i=0; i<5; i++){
     list.push({
       name: faker.person.firstName(),
       jobTitle: faker.person.jobTitle(),
