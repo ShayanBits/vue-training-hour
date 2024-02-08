@@ -1,8 +1,6 @@
 <template>
   <List :items="myItems">
-    <!-- Define the template for the named slot "item" -->
     <template #item="{ item }">
-      <!-- Use your ListItem component or any custom template here -->
       <ListItem :item="item" />
     </template>
   </List>
@@ -13,10 +11,10 @@ import List from "@/components/List.vue"
 import ListItem from "@/components/ListItem.vue"
 
 const myItems= [
-    {name:"John", lastName: "Wick", id: ""},
-    {name:"John", lastName: "Doe", id: ""},
-    {name:"Albert", lastName: "Ion", id: ""},
-    {name:"Walter", lastName: "White", id: ""},
+    {name:"John", lastName: "Wick", id: "XXX"},
+    {name:"John", lastName: "Doe", id: "XXX "},
+    {name:"Albert", lastName: "Ion", id: "XXX "},
+    {name:"Walter", lastName: "White", id: "XXX "},
 ]
 
 </script>
