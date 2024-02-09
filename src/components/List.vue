@@ -1,7 +1,7 @@
 <template>
   <div>
     <template v-for="(item, index) in items" :key="index">
-      <slot name="item" :item="item"></slot>
+      <slot name="bla" :itemtobePassed="item"></slot>
     </template>
   </div>
 </template>

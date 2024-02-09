@@ -1,20 +1,20 @@
 <template>
     <div class="flex border-2 border-spacing-2 border-red-400 rounded gap-2 m-3 p-3">
         <p>
-            {{ item.name }}
+            {{ personalInformation.name }}
         </p>
         <p>
-            {{ item.lastName }}
+            {{ personalInformation.lastName }}
         </p>
         <p>
-            {{ item.id }}
+            {{ personalInformation.id }}
         </p>
     </div>
 </template>
 
 <script setup>
 defineProps({
-    item: {
+    personalInformation: {
         type: Object,
         required: true
     }

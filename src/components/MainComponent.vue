@@ -1,7 +1,7 @@
 <template>
   <List :items="myItems">
-    <template #item="{ item }">
-      <ListItem :item="item" />
+    <template #bla="{ itemtobePassed }">
+      <ListItem :personalInformation="itemtobePassed" />
     </template>
   </List>
 </template>
